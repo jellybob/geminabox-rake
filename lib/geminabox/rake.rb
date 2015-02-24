@@ -17,7 +17,7 @@ module Geminabox
         URI.parse(host)
       end
       @namespace = opts[:namespace]
-      super File.absolute_path(dir), name
+      super File.expand_path(dir), name
     end
 
     def install
